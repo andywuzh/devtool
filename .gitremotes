@@ -1,0 +1,8 @@
+origin	git@github.com:cola1129/tmp.git (fetch)
+origin	git@github.com:cola1129/tmp.git (push)
+phpRedisAdmin	https://github.com/ErikDubbelboer/phpRedisAdmin.git (fetch)
+phpRedisAdmin	https://github.com/ErikDubbelboer/phpRedisAdmin.git (push)
+predis	https://github.com/nrk/predis.git (fetch)
+predis	https://github.com/nrk/predis.git (push)
+xhprof	https://github.com/facebook/xhprof.git (push)
+xhprof	https://github.com/facebook/xhprof.git (fetch)
