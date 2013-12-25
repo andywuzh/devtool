@@ -40,7 +40,7 @@ class Test
                 if (e.keyCode == 13 && (e.metaKey || e.altKey)) {
                     $.ajax({
                         type: 'POST',
-                        url: '/test.php?_ac='+$('input[name=type]:checked').val(),
+                        url: '/parse.php?_ac='+$('input[name=type]:checked').val(),
                         data: {source: $(this).val()},
                         complete: function(xhr) {
                             $('#outputField').append(xhr.responseText);
@@ -85,6 +85,11 @@ EOF;
     public function base64Decode() {
         $this->_check();
 
-        print_r(base64_decode($this->_source, true));
+        $parsedStr = base64_decode($this->_source, true);
+        if (strpos($parsedStr, '&') !== false) {
+            parse_str($parsedStr, $parsedStr);
+        }
+
+        print_r($parsedStr);
     }
 }
